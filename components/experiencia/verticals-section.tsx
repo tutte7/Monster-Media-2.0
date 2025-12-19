@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/lib/language-context"
 import { Card } from "@/components/ui/card"
-import { Megaphone, Plane, ShoppingBag, Handshake } from "lucide-react"
+import { Megaphone, Plane, ShoppingBag, Handshake, Globe } from "lucide-react"
 
 export function VerticalsSection() {
   const { t } = useLanguage()
@@ -18,7 +18,7 @@ export function VerticalsSection() {
       },
       highlights: [
         { es: "Activaciones de marca", en: "Brand activations" },
-        { es: "Eventos corporativos", en: "Corporate events" },
+        { es: "Eventos masivos y corporativos", en: "Massive and corporate events" },
         { es: "Experiencias inmersivas", en: "Immersive experiences" },
         { es: "Campañas experienciales", en: "Experiential campaigns" },
       ],
@@ -28,14 +28,29 @@ export function VerticalsSection() {
       icon: Plane,
       title: { es: "Turismo", en: "Tourism" },
       description: {
-        es: "Soluciones tecnológicas para la industria turística que mejoran la experiencia del viajero. Desde kioskos informativos hasta experiencias interactivas en hoteles y destinos.",
-        en: "Technological solutions for the tourism industry that enhance the traveler experience. From information kiosks to interactive experiences in hotels and destinations.",
+        es: "Desarrollamos campañas digitales que posicionan y promueven los destinos turísticos de México a nivel internacional, a través de contenido testimonial auténtico y en tiempo real, conectando con audiencias globales desde la experiencia real del viajero.",
+        en: "We develop digital campaigns that position and promote Mexico's tourist destinations internationally, through authentic real-time testimonial content, connecting with global audiences from the traveler's real experience.",
       },
       highlights: [
-        { es: "Kioskos informativos", en: "Information kiosks" },
-        { es: "Experiencias hoteleras", en: "Hotel experiences" },
-        { es: "Guías interactivas", en: "Interactive guides" },
-        { es: "Señalización digital", en: "Digital signage" },
+        { es: "Testimoniales en tiempo real", en: "Real-time testimonials" },
+        { es: "Contratación de medios digitales en otros países", en: "Digital media placement in other countries" },
+        { es: "La voz auténtica del turista viviendo la experiencia en México", en: "The authentic voice of the tourist living the experience in Mexico" },
+        { es: "Viralización orgánica del contenido", en: "Organic content viralization" },
+        { es: "*Award Winning Campaign", en: "*Award Winning Campaign" },
+      ],
+    },
+    {
+      id: "digital",
+      icon: Globe,
+      title: { es: "Digital", en: "Digital" },
+      description: {
+        es: "Creamos y gestionamos estrategias de comercialización digital que integran productos de forma efectiva en plataformas como TikTok Shop, Amazon y Mercado Libre, conectando marcas con audiencias listas para comprar a través de contenido y distribución estratégica.",
+        en: "We create and manage digital marketing strategies that effectively integrate products into platforms like TikTok Shop, Amazon, and Mercado Libre, connecting brands with audiences ready to buy through content and strategic distribution.",
+      },
+      highlights: [
+        { es: "Integración de productos a las plataformas", en: "Product integration into platforms" },
+        { es: "Estrategias de contenido", en: "Content strategies" },
+        { es: "Gestión y optimización de listings", en: "Listing management and optimization" },
       ],
     },
     {

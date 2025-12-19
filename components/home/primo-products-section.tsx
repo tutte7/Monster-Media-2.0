@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { GlassCard } from "@/components/ui/glass-card"
 import { useLanguage } from "@/lib/language-context"
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Box, Timer, TrendingUp, Lightbulb, ClipboardCheck, Zap } from "lucide-react"
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper"
 
 export function PrimoProductsSection() {
@@ -24,7 +24,7 @@ export function PrimoProductsSection() {
         t({ es: "Personalizable: bumper o full case", en: "Customizable: bumper or full case" }),
         t({ es: "Más verde: menos desperdicio", en: "Greener: less waste" }),
       ],
-      image: `${redwolfBase}/Case-For-All-Banner.png`,
+      image: "/primo-3d.png",
       cta: t({ es: "Ver más", en: "Learn more" }),
     },
     {
@@ -38,21 +38,21 @@ export function PrimoProductsSection() {
         t({ es: "Aplicación en seco o húmedo", en: "Wet or dry application" }),
         t({ es: "Corte on‑demand para cualquier modelo", en: "On‑demand cutting for any model" }),
       ],
-      image: `${redwolfBase}/Banner-Mockup.png`,
+      image: "/primo-protect.png",
       cta: t({ es: "Ver más", en: "Learn more" }),
     },
     {
       slug: "#",
-      name: "EufyMake",
-      tagline: t({ es: "Impresión 3D Industrial de Alta Precisión", en: "High Precision Industrial 3D Printing" }),
+      name: "PRIMO POLISH",
+      tagline: t({ es: "Pulido de Pantallas de Alta Precisión", en: "High Precision Screen Polishing" }),
       bulletPoints: [
-        t({ es: "Resolución de hasta 50 micras", en: "Resolution up to 50 microns" }),
-        t({ es: "Volumen de construcción de 1m³", en: "Build volume of 1m³" }),
-        t({ es: "Materiales: PLA, ABS, PETG, TPU", en: "Materials: PLA, ABS, PETG, TPU" }),
-        t({ es: "Ideal para prototipos y producción", en: "Ideal for prototypes and production" }),
+        t({ es: "Elimina rayas superficiales y profundas", en: "Removes surface and deep scratches" }),
+        t({ es: "Restaura el brillo original de la pantalla", en: "Restores original screen shine" }),
+        t({ es: "Compatible con múltiples dispositivos", en: "Compatible with multiple devices" }),
+        t({ es: "Proceso automatizado y seguro", en: "Automated and safe process" }),
         t({ es: "Tecnología de última generación", en: "State-of-the-art technology" }),
       ],
-      image: "/placeholder.jpg",
+      image: "/primo-polish.png",
       cta: t({ es: "Ver más", en: "Learn more" }),
     }
   ]
@@ -77,15 +77,117 @@ export function PrimoProductsSection() {
           </div>
         </FadeIn>
 
-        {/* Layout: Imagen Grande Arriba */}
+        {/* Layout: Grid de Ventajas */}
         <FadeIn delay={0.2} fullWidth>
-          <GlassCard variant="default" className="mb-12 w-full max-w-6xl mx-auto overflow-hidden">
-            <div className="aspect-[21/9] w-full bg-card/50 relative">
-              <img
-                src="/interactive-table-with-multiple-users.jpg"
-                alt="Ecosistema Primo Overview"
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-              />
+          <GlassCard variant="default" className="mb-12 w-full max-w-6xl mx-auto p-8 md:p-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+              {/* Compacto */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <Box className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">
+                    {t({ es: "Compacto", en: "Compact" })}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t({
+                      es: "Tamaño similar al de una impresora, Primo se adapta fácilmente a cualquier entorno.",
+                      en: "About the size of a printer, Primo easily fits in any repair environment.",
+                    })}
+                  </p>
+                </div>
+              </div>
+
+              {/* Rápido */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <Timer className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">
+                    {t({ es: "Rápido", en: "Quick" })}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t({
+                      es: "Soluciones de protección para tu teléfono en menos de 15 minutos",
+                      en: "In about 10 minutes your team can resurface a device, saving you time and money",
+                    })}
+                  </p>
+                </div>
+              </div>
+
+              {/* Rentable */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <TrendingUp className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">
+                    {t({ es: "Rentable", en: "Profitable" })}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t({
+                      es: "Este servicio genera nuevas fuentes de ingresos y altos márgenes de rentabilidad para su negocio.",
+                      en: "This service adds great new revenue and high margins to your shop",
+                    })}
+                  </p>
+                </div>
+              </div>
+
+              {/* Innovador */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <Lightbulb className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">
+                    {t({ es: "Innovador", en: "Innovative" })}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t({
+                      es: "Líderes en tecnología bajo demanda, elevamos el estándar con nuevos productos exclusivos de Primo.",
+                      en: "The leaders in on-demand technology, we step up the bar with new products exclusive to Red Wolf Technology.",
+                    })}
+                  </p>
+                </div>
+              </div>
+
+              {/* On-Demand */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <ClipboardCheck className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">
+                    {t({ es: "On-Demand", en: "On-Demand" })}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t({
+                      es: "Elimina definitivamente las pérdidas por inventario excedente.",
+                      en: "Never lose money on overstocked inventory again.",
+                    })}
+                  </p>
+                </div>
+              </div>
+
+              {/* Digital */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <Zap className="h-8 w-8 text-primary" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-2">
+                    {t({ es: "Digital", en: "Digital" })}
+                  </h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {t({
+                      es: "Dashboards de reporteos en tiempo real",
+                      en: "Our smart polishing algorithm calculates optimal scratch removal",
+                    })}
+                  </p>
+                </div>
+              </div>
             </div>
           </GlassCard>
         </FadeIn>

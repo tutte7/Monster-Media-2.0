@@ -13,7 +13,7 @@ export function TopicsSection() {
     {
       slug: "/monster-mobile/toluca-fc-coca-cola",
       title: t({ es: "Toluca FC x Coca‑Cola", en: "Toluca FC x Coca‑Cola" }),
-      image: "/toluca-fc-stadium-with-fans-holding-customized-pho.jpg",
+      image: "/portada-toluca.png",
       summary: t({
         es: "Aplicación de más de 5,000 micas exclusivas conmemorativas de los 100 años del Toluca FC en el Estadio Nemesio Diez.",
         en: "Applied 5,000+ exclusive screen protectors commemorating Toluca FC's 100 years at Nemesio Diez Stadium.",
@@ -23,7 +23,7 @@ export function TopicsSection() {
     {
       slug: "/monster-mobile/mundial-fifa-russia-2018",
       title: t({ es: "Mundial FIFA Rusia 2018", en: "FIFA World Cup Russia 2018" }),
-      image: "/fifa-world-cup-2018-stadium-with-customized-phones.jpg",
+      image: "/portada-rusia.png",
       summary: t({
         es: "Producción de micas con 3 diseños exclusivos de la Selección Mexicana, ventas 13,000+ en Liverpool, Amazon y FanFest.",
         en: "Produced screen protectors with 3 exclusive Mexico NT designs, 13,000+ sales at Liverpool, Amazon and FanFest.",

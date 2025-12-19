@@ -13,50 +13,80 @@ export function HighlightsSection() {
     {
       category: { es: "Caso de Estudio", en: "Case Study" },
       title: {
-        es: "Impresión UV en 500+ Dispositivos",
-        en: "UV Printing on 500+ Devices",
+        es: "Impresión UV",
+        en: "UV Printing",
       },
       description: {
         es: "Proyecto masivo de personalización para cliente corporativo",
         en: "Massive customization project for corporate client",
       },
       date: "2024",
+      video: "#",
     },
     {
       category: { es: "Caso de Estudio", en: "Case Study" },
       title: {
-        es: "Protect My Phone: corte on-demand en retail",
-        en: "Protect My Phone: on-demand cutting in retail",
+        es: "Protect my phone",
+        en: "Protect my phone",
       },
       description: {
         es: "Despliegue de estaciones para protección y corte a medida en tiendas minoristas.",
         en: "Deployment of protection and on-demand cutting stations across retail stores.",
       },
       date: "2025",
+      video: "https://www.dropbox.com/scl/fi/hn4mxrygzy108ce3vdg5l/CV_1010-PROTECT-MY-IPHONE-999.mp4?rlkey=0e93a4xm6xq0mmquqsp3uqw4v&st=esjb5le6&dl=0",
     },
     {
       category: { es: "Innovación", en: "Innovation" },
       title: {
-        es: "Robótica en Eventos Masivos",
-        en: "Robotics at Massive Events",
+        es: "Robotica en eventos masivos",
+        en: "Robotics at massive events",
       },
       description: {
         es: "Implementación de brazos robóticos en ferias internacionales",
         en: "Implementation of robotic arms at international fairs",
       },
       date: "2024",
+      video: "https://www.dropbox.com/scl/fi/7b8i6gp1ro2f6xku2k2us/MASTER-ESFERA-CORREGIDO-Y-AUMENTADO-02.02.18.mp4?rlkey=9s57krys2r6wsmyuim8cj8xr3&e=1&st=zfra3wa1&dl=0",
     },
     {
       category: { es: "Tecnología", en: "Technology" },
       title: {
-        es: "Interactivos de Realidad Aumentada",
-        en: "Augmented Reality Interactive",
+        es: "Interactivos de realidad aumentada: MothionSphere",
+        en: "Augmented reality interactive: MothionSphere",
       },
       description: {
         es: "Experiencias inmersivas para marcas líderes",
         en: "Immersive experiences for leading brands",
       },
       date: "2024",
+      video: "https://www.youtube.com/watch?v=Gd53HK_ML8M",
+    },
+    {
+      category: { es: "Tecnología", en: "Technology" },
+      title: {
+        es: "Interactivos de realidad aumentada",
+        en: "Augmented reality interactive",
+      },
+      description: {
+        es: "Soluciones interactivas de última generación",
+        en: "Next-generation interactive solutions",
+      },
+      date: "2024",
+      video: "https://www.youtube.com/watch?v=5ueP_qWTJbg",
+    },
+    {
+      category: { es: "Tecnología", en: "Technology" },
+      title: {
+        es: "Interactivos de realidad aumentada: Climbing Wall",
+        en: "Augmented reality interactive: Climbing Wall",
+      },
+      description: {
+        es: "Muros de escalada interactivos con realidad aumentada",
+        en: "Interactive climbing walls with augmented reality",
+      },
+      date: "2024",
+      video: "https://www.youtube.com/watch?v=zzTtpyzJaVQ",
     },
   ]
 
@@ -80,20 +110,29 @@ export function HighlightsSection() {
         </div>
 
         {/* Highlights Grid */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
           {highlights.map((highlight, index) => (
-            <Card key={index} className="p-6 hover:border-primary transition-all duration-300 group">
+            <Card key={index} className="p-6 hover:border-primary transition-all duration-300 group flex flex-col">
               <div className="flex items-center gap-2 text-sm text-primary mb-3">
                 <Calendar className="h-4 w-4" />
                 <span>{highlight.date}</span>
               </div>
-              <div className="inline-block px-3 py-1 bg-secondary rounded-full text-xs font-medium mb-4">
+              <div className="inline-block px-3 py-1 bg-secondary rounded-full text-xs font-medium mb-4 w-fit">
                 {t(highlight.category)}
               </div>
               <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-3 group-hover:text-primary transition-colors">
                 {t(highlight.title)}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{t(highlight.description)}</p>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">{t(highlight.description)}</p>
+              
+              {highlight.video !== "#" && (
+                <Button variant="outline" size="sm" className="w-full group/btn" asChild>
+                  <a href={highlight.video} target="_blank" rel="noopener noreferrer">
+                    {t({ es: "Ver Video", en: "Watch Video" })}
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                  </a>
+                </Button>
+              )}
             </Card>
           ))}
         </div>

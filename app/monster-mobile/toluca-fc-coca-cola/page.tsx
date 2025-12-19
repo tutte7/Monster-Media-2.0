@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function TolucaFCCocaColaPage() {
   const gallery = [
-    "/toluca-fc-stadium-with-fans-holding-customized-pho.jpg",
-    "/toluca-fc-phone-with-red-and-white-design.jpg",
-    "/multiple-toluca-fc-phones-arranged-in-pattern.jpg",
-    "/close-up-of-toluca-fc-logo-on-phone-back.jpg",
+    "/portada-toluca.png",
+    "/img-1-toluca.png",
+    "/img-2-toluca.png",
+    "/img-3-toluca.png",
   ]
 
   return (

@@ -14,6 +14,7 @@ export function TopicsSection() {
       slug: "/monster-media/viba",
       title: t({ es: "Viba", en: "Viba" }),
       image: "/interactive-digital-signage-wall.jpg",
+      video: "https://www.youtube.com/watch?v=z0xSsC8dpsA",
       summary: t({
         es: "Atención al cliente 24/7 sin contacto, contenido dinámico, promociones y call center virtual.",
         en: "24/7 contactless customer service, dynamic content, promos and virtual call center.",
@@ -23,7 +24,8 @@ export function TopicsSection() {
     {
       slug: "/monster-media/motionsphere",
       title: t({ es: "MotionSphere", en: "MotionSphere" }),
-      image: "/MotionSphere.png",
+      image: "/portada-MotionSphere.jpg",
+      video: "https://www.youtube.com/watch?v=Gd53HK_ML8M",
       summary: t({
         es: "Activaciones inmersivas con simuladores de alto impacto para marcas líderes.",
         en: "Immersive activations with high‑impact simulators for leading brands.",
@@ -33,7 +35,8 @@ export function TopicsSection() {
     {
       slug: "/monster-media/climbing-wall",
       title: t({ es: "Climbing Wall", en: "Climbing Wall" }),
-      image: "/Climbing Wall.png",
+      image: "/portada-Climbing Wall.png",
+      video: "https://www.youtube.com/watch?v=zzTtpyzJaVQ",
       summary: t({
         es: "Plataforma de juegos para muros de escalar que combina actividad física con diversión interactiva.",
         en: "Game platform for climbing walls combining fitness with interactive fun.",
@@ -43,7 +46,8 @@ export function TopicsSection() {
     {
       slug: "/monster-media/kioskos",
       title: t({ es: "Kioskos", en: "Kiosks" }),
-      image: "/Kioskos.png",
+      image: "/portada-kioskos.png",
+      video: "https://www.youtube.com/watch?v=5ueP_qWTJbg",
       summary: t({
         es: "Centros de carga y experiencias táctiles con contenido de marca y juegos interactivos.",
         en: "Charging hubs and touch experiences with branded content and interactive games.",
@@ -53,12 +57,23 @@ export function TopicsSection() {
     {
       slug: "/monster-media/valojump",
       title: t({ es: "ValoJump", en: "ValoJump" }),
-      image: "/ValoJump.png",
+      image: "/portada-valojump.png",
+      video: "https://www.youtube.com/watch?v=5ueP_qWTJbg",
       summary: t({
         es: "Experiencia de salto gamificada que atrae audiencias y genera alto engagement.",
         en: "Gamified jumping experience that attracts audiences and high engagement.",
       }),
       source: "https://luisgarciamoreno95.wixsite.com/monster1/valojump",
+    },
+    {
+      slug: "/monster-media/bright-box",
+      title: t({ es: "Bright Box", en: "Bright Box" }),
+      image: "/portada-Bright Box.jpg",
+      summary: t({
+        es: "Estaciones de carga segura con lockers inteligentes y pantallas de comunicación dinámica.",
+        en: "Secure charging stations with smart lockers and dynamic communication screens.",
+      }),
+      source: "https://luisgarciamoreno95.wixsite.com/monster1/bright-box",
     },
   ]
 
@@ -90,7 +105,13 @@ export function TopicsSection() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-
+                  {topic.video && (
+                    <Button variant="outline" asChild>
+                      <a href={topic.video} target="_blank" rel="noopener noreferrer">
+                        {t({ es: "Ver Video", en: "Watch Video" })}
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </Card>

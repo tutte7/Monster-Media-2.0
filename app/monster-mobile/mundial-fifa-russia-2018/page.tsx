@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function FifaRussia2018Page() {
   const gallery = [
+    "/portada-rusia.png",
     "/fifa-world-cup-2018-stadium-with-customized-phones.jpg",
     "/fifa-world-cup-2018-phone-with-russia-design.jpg",
     "/multiple-fifa-phones-with-different-country-flags.jpg",
-    "/collection-of-fifa-2018-customized-phones.jpg",
   ]
 
   const videos = [
@@ -54,39 +54,16 @@ export default function FifaRussia2018Page() {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {gallery.map((src) => (
-              <div key={src} className="aspect-[3/4] rounded-xl overflow-hidden border border-border bg-card/50">
-                <img src={src} alt="FIFA 2018 project" className="h-full w-full object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)]">
-              Video del Proyecto
-            </h2>
-            <p className="text-muted-foreground mt-3">
-              Micas SNM 2018 en acción.
-            </p>
-          </div>
-
           <div className="max-w-5xl mx-auto">
-            {videos.map((video) => (
-              <div key={video.src} className="aspect-video rounded-2xl overflow-hidden border border-border bg-card/50 shadow-sm">
-                <iframe
-                  src={video.src}
-                  title={video.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  className="w-full h-full"
-                />
-              </div>
-            ))}
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border bg-card/50 shadow-2xl">
+              <iframe
+                src="https://www.youtube.com/embed/iecn2_0QxYQ"
+                title="Mundial FIFA Rusia 2018"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </section>

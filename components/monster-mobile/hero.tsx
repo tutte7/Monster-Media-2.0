@@ -33,14 +33,14 @@ export function MonsterMobileHero() {
           </p>
 
           {/* Features */}
-          <div className="flex flex-wrap items-center justify-center gap-8 pt-8">
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-primary/10 rounded-lg">
+          <div className="grid md:grid-cols-3 gap-8 pt-8 max-w-5xl mx-auto">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <div className="p-2 bg-primary/10 rounded-lg shrink-0">
                 <Smartphone className="h-6 w-6 text-primary" />
               </div>
               <div className="text-left">
-                <div className="font-semibold">
-                  {t({ es: "3M+ teléfonos protegidos", en: "3M+ phones protected" })}
+                <div className="font-semibold whitespace-nowrap">
+                  {t({ es: "+5M teléfonos protegidos", en: "+5M phones protected" })}
                 </div>
                 <div className="text-sm text-muted-foreground">
                   {t({ es: "Experiencia comprobada", en: "Proven track record" })}
@@ -48,58 +48,26 @@ export function MonsterMobileHero() {
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-primary/10 rounded-lg">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <div className="p-2 bg-primary/10 rounded-lg shrink-0">
                 <Palette className="h-6 w-6 text-primary" />
               </div>
               <div className="text-left">
                 <div className="font-semibold">
-                  {t({ es: "Tiendas con nuestros productos", en: "Stores carrying our products" })}
-                </div>
-                <div className="text-xs text-muted-foreground mt-1">
-                  {language === "es" ? (
-                    <ul className="list-none space-y-0.5">
-                      <li>
-                        <strong>Argentina:</strong> Maransi 10, Claro 36
-                      </li>
-                      <li>
-                        <strong>Chile:</strong> Samsung 17, Claro 51
-                      </li>
-                      <li>
-                        <strong>Guatemala:</strong> Samsung 61
-                      </li>
-                      <li>
-                        <strong>México:</strong> Telcel 450, Coppel 206, Palacio de Hierro 18
-                      </li>
-                      <li className="italic text-primary/80">Próximamente: El Salvador y CRC</li>
-                    </ul>
-                  ) : (
-                    <ul className="list-none space-y-0.5">
-                      <li>
-                        <strong>Argentina:</strong> Maransi 10, Claro 36
-                      </li>
-                      <li>
-                        <strong>Chile:</strong> Samsung 17, Claro 51
-                      </li>
-                      <li>
-                        <strong>Guatemala:</strong> Samsung 61
-                      </li>
-                      <li>
-                        <strong>Mexico:</strong> Telcel 450, Coppel 206, Palacio de Hierro 18
-                      </li>
-                      <li className="italic text-primary/80">Coming soon: El Salvador and CRC</li>
-                    </ul>
-                  )}
+                  {t({
+                    es: "+1,200 tiendas con nuestros productos en México y Latam",
+                    en: "+1,200 stores with our products in Mexico and Latam",
+                  })}
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-primary/10 rounded-lg">
+            <div className="flex items-center gap-3 justify-center md:justify-start">
+              <div className="p-2 bg-primary/10 rounded-lg shrink-0">
                 <Zap className="h-6 w-6 text-primary" />
               </div>
               <div className="text-left">
-                <div className="font-semibold">
+                <div className="font-semibold whitespace-nowrap">
                   {t({ es: "Producción on demand", en: "On-demand production" })}
                 </div>
                 <div className="text-sm text-muted-foreground">

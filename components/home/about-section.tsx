@@ -50,10 +50,10 @@ export function AboutSection() {
                 en: "Leaders in Technological Innovation",
               })}
             </h2>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed text-pretty">
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed text-pretty whitespace-pre-line">
               {t({
-                es: "Monster Media es la representación oficial de marcas AAA en México y Latinoamérica. Ofrecemos soluciones integrales en impresión 3D, robótica, interactivos y tecnología de vanguardia.",
-                en: "Monster Media is the official representation of AAA brands in Mexico and Latin America. We offer comprehensive solutions in 3D printing, robotics, interactive technology and cutting-edge innovation.",
+                es: "Monster Media es el socio estratégico ideal para las empresas que buscan expandir su negocio en México y el resto de Latinoamérica.\n\nAcompañamos a nuestros clientes y socios en el crecimiento de su negocio, desarrollando estrategias efectivas que maximizan oportunidades, aceleran resultados y fortalecen su posicionamiento en la región.",
+                en: "Monster Media is the ideal strategic partner for companies looking to expand their business in Mexico and the rest of Latin America.\n\nWe accompany our clients and partners in the growth of their business, developing effective strategies that maximize opportunities, accelerate results and strengthen their positioning in the region.",
               })}
             </p>
 

@@ -24,10 +24,10 @@ export function ChannelsSection() {
             <CardContent className="text-center pt-4">
               <ul className="space-y-4">
                 <li className="text-xl text-muted-foreground hover:text-foreground transition-colors">
-                  Marketplaces
+                  Amazon & Mercado Libre
                 </li>
                 <li className="text-xl text-muted-foreground hover:text-foreground transition-colors">
-                  Social Media
+                  TikTok Shop & Social Media
                 </li>
               </ul>
             </CardContent>

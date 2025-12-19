@@ -9,20 +9,20 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Monster Media | Innovación y Tecnología para LATAM",
   description:
-    "Ecosistema PRIMO (PRIMO PRINT 3D + PRIMO PROTECT), impresoras UV eufyMake, soluciones interactivas y robótica. Innovación, tecnología y representación de marcas para México y Latinoamérica.",
+    "Ecosistema PRIMO (PRIMO PRINT 3D + PRIMO PROTECT + PRIMO POLISH), soluciones interactivas y robótica. Innovación, tecnología y representación de marcas para México y Latinoamérica.",
   keywords: [
     "PRIMO 3D",
     "PRIMO PROTECT",
-    "eufyMake",
+    "PRIMO POLISH",
     "impresión 3D",
-    "impresión UV",
+    "pulido de pantallas",
     "tecnología México",
     "innovación LATAM",
     "Monster Media",
   ],
   openGraph: {
     title: "Monster Media | Innovación y Tecnología para LATAM",
-    description: "Ecosistema PRIMO, impresoras UV, soluciones interactivas y robótica para México y Latinoamérica",
+    description: "Ecosistema PRIMO, soluciones interactivas y robótica para México y Latinoamérica",
     type: "website",
   },
 }

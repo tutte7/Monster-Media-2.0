@@ -16,8 +16,8 @@ export function ExperienciaHero() {
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-[family-name:var(--font-space-grotesk)] mb-6 text-balance">
             {t({
-              es: "Más de 20 Años de Innovación",
-              en: "Over 20 Years of Innovation",
+              es: "Más de 25 años de innovación",
+              en: "Over 25 years of innovation",
             })}
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 text-pretty leading-relaxed">
@@ -28,8 +28,8 @@ export function ExperienciaHero() {
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty">
             {t({
-              es: "Empresa 100% Mexicana con más de 20 años de experiencia en Retail, Marketing BTL, Producción de Eventos, E-Commerce, Telefonía y ahora también Robótica.",
-              en: "100% Mexican company with over 20 years of experience in Retail, BTL Marketing, Event Production, E-Commerce, Telephony and now also Robotics.",
+              es: "Empresa 100% Mexicana con más de 25 años de experiencia en Retail, Marketing BTL, Producción de Eventos, E-Commerce, Telefonía y ahora también Robótica.",
+              en: "100% Mexican company with over 25 years of experience in Retail, BTL Marketing, Event Production, E-Commerce, Telephony and now also Robotics.",
             })}
           </p>
         </div>

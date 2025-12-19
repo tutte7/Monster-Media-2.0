@@ -12,18 +12,18 @@ export function LatamPresence() {
   const stats = [
     {
       icon: MapPin,
-      value: "15+",
-      label: { es: "Países en LATAM", en: "Countries in LATAM" },
+      value: "+10",
+      label: { es: "paises", en: "countries" },
     },
     {
       icon: Building2,
-      value: "800+",
-      label: { es: "Número de Tiendas", en: "Number of Stores" },
+      value: "+1,200",
+      label: { es: "tiendas", en: "stores" },
     },
     {
       icon: Users,
-      value: "200+",
-      label: { es: "Socios Estratégicos", en: "Strategic Partners" },
+      value: "+50",
+      label: { es: "socios estratégicos", en: "strategic partners" },
     },
     {
       icon: Award,
@@ -91,6 +91,33 @@ export function LatamPresence() {
       stores: ["Claro (36)", "Maransi (10)"],
       left: "59%",
       top: "76%",
+    },
+    {
+      id: "co",
+      name: { es: "Colombia", en: "Colombia" },
+      flag: "🇨🇴",
+      stores: ["Próximamente"],
+      left: "49%",
+      top: "31%",
+      comingSoon: true,
+    },
+    {
+      id: "pe",
+      name: { es: "Perú", en: "Peru" },
+      flag: "🇵🇪",
+      stores: ["Próximamente"],
+      left: "48%",
+      top: "46%",
+      comingSoon: true,
+    },
+    {
+      id: "br",
+      name: { es: "Brasil", en: "Brazil" },
+      flag: "🇧🇷",
+      stores: ["Próximamente"],
+      left: "63.5%",
+      top: "66%",
+      comingSoon: true,
     },
   ]
 

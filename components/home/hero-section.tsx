@@ -45,10 +45,10 @@ export function HeroSection() {
 
             {/* Subtitle */}
             <StaggerItem>
-              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty font-light">
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty font-light whitespace-pre-line">
                 {t({
-                  es: "Representación de marcas AAA, impresión 3D, robótica e interactivos para México y LATAM",
-                  en: "AAA brand representation, 3D printing, robotics and interactive solutions for Mexico and LATAM",
+                  es: "Representación de marcas, Impresión 3D, soluciones On-Demand\npara telefonía, Robótica e Interactivos para México y LATAM",
+                  en: "Brand representation, 3D Printing, On-Demand solutions\nfor telephony, Robotics and Interactives for Mexico and LATAM",
                 })}
               </p>
             </StaggerItem>
