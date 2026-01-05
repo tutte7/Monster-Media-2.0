@@ -9,6 +9,12 @@ import Link from "next/link"
 export function HighlightsSection() {
   const { t } = useLanguage()
 
+  const getYouTubeEmbedUrl = (url: string) => {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/
+    const match = url.match(regExp)
+    return match && match[2].length === 11 ? `https://www.youtube.com/embed/${match[2]}` : url
+  }
+
   const highlights = [
     {
       category: { es: "Caso de Estudio", en: "Case Study" },
@@ -126,12 +132,46 @@ export function HighlightsSection() {
               <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">{t(highlight.description)}</p>
               
               {highlight.video !== "#" && (
-                <Button variant="outline" size="sm" className="w-full group/btn" asChild>
-                  <a href={highlight.video} target="_blank" rel="noopener noreferrer">
-                    {t({ es: "Ver Video", en: "Watch Video" })}
-                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                  </a>
-                </Button>
+                <div className="mt-auto">
+                  <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted border border-border mb-3">
+                    {highlight.video.includes("youtube.com") || highlight.video.includes("youtu.be") ? (
+                      <iframe
+                        className="w-full h-full"
+                        src={getYouTubeEmbedUrl(highlight.video)}
+                        title={t(highlight.title)}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    ) : highlight.video.includes("dropbox.com") ? (
+                      <video
+                        className="w-full h-full object-cover"
+                        controls
+                        preload="metadata"
+                      >
+                        <source src={highlight.video.replace("dl=0", "raw=1")} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <Button variant="outline" size="sm" className="w-full group/btn" asChild>
+                        <a href={highlight.video} target="_blank" rel="noopener noreferrer">
+                          {t({ es: "Ver Video", en: "Watch Video" })}
+                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
+                        </a>
+                      </Button>
+                    )}
+                  </div>
+                  {(highlight.video.includes("youtube.com") || highlight.video.includes("youtu.be")) && (
+                    <a 
+                      href={highlight.video} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-xs text-muted-foreground hover:text-primary flex items-center justify-center gap-1 transition-colors"
+                    >
+                      {t({ es: "Ver en YouTube", en: "Watch on YouTube" })}
+                      <ArrowRight className="h-3 w-3" />
+                    </a>
+                  )}
+                </div>
               )}
             </Card>
           ))}

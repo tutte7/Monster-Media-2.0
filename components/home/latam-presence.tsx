@@ -217,12 +217,20 @@ export function LatamPresence() {
 
                     {/* Label */}
                     <div className={cn(
-                      "absolute top-6 whitespace-nowrap px-3 py-1.5 bg-black/80 backdrop-blur-md rounded-lg border border-white/10 text-xs font-medium text-white transition-all duration-300 pointer-events-none z-20 flex items-center gap-2 shadow-xl origin-top",
+                      "absolute top-8 left-1/2 -translate-x-1/2 whitespace-nowrap px-4 py-2 bg-black/90 backdrop-blur-md rounded-xl border border-white/20 text-sm font-semibold text-white transition-all duration-300 pointer-events-none z-30 flex items-center gap-3 shadow-[0_8px_32px_rgba(0,0,0,0.5)] origin-top w-max",
                       hoveredCountry === country.id ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-90 -translate-y-2"
                     )}>
-                      <span className="text-base leading-none">{country.flag}</span>
-                      <span>{t(country.name)}</span>
-                      {country.comingSoon && <span className="text-[10px] text-yellow-500 bg-yellow-500/10 px-1.5 py-0.5 rounded ml-1 font-bold">SOON</span>}
+                      <img 
+                        src={`https://flagcdn.com/w40/${country.id}.png`} 
+                        alt={t(country.name)}
+                        className="w-5 h-auto rounded-sm shadow-sm flex-shrink-0"
+                      />
+                      <span className="flex-shrink-0">{t(country.name)}</span>
+                      {country.comingSoon && (
+                        <span className="text-[10px] text-yellow-500 bg-yellow-500/20 px-2 py-0.5 rounded-md border border-yellow-500/30 font-bold tracking-wider flex-shrink-0">
+                          SOON
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -244,10 +252,14 @@ export function LatamPresence() {
                     <div className="space-y-4 relative z-10">
                       <div className="flex items-center justify-between border-b border-white/10 pb-3">
                         <div className="flex items-center gap-3">
-                          <span className="text-4xl shadow-sm">{country.flag}</span>
-                          <div>
-                            <h3 className="font-bold text-lg text-white leading-none tracking-tight">{t(country.name)}</h3>
-                            <p className="text-xs text-muted-foreground mt-1">Monster Media Network</p>
+                          <img 
+                            src={`https://flagcdn.com/w80/${country.id}.png`} 
+                            alt={t(country.name)}
+                            className="w-10 h-auto rounded-md shadow-sm flex-shrink-0"
+                          />
+                          <div className="min-w-0">
+                            <h3 className="font-bold text-lg text-white leading-none tracking-tight truncate">{t(country.name)}</h3>
+                            <p className="text-xs text-muted-foreground mt-1 truncate">Monster Media Network</p>
                           </div>
                         </div>
                       </div>

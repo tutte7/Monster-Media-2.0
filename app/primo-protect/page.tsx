@@ -70,7 +70,7 @@ export default function PrimoProtectPage() {
 
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden border border-border bg-card/50">
-                <img src={`${base}/Primo-Protect.png`} alt="PRIMO PROTECT" className="h-full w-full object-cover" />
+                <img src="/primo-protect-hd.png" alt="PRIMO PROTECT" className="h-full w-full object-cover" />
               </div>
             </div>
           </div>

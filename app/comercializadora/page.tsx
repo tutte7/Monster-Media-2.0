@@ -1,5 +1,6 @@
 import { ComercializadoraHero } from "@/components/comercializadora/hero"
 import { ChannelsSection } from "@/components/comercializadora/channels-section"
+import { DistributionSchema } from "@/components/comercializadora/distribution-schema"
 import { ProductCarousel } from "@/components/comercializadora/product-carousel"
 import type { Metadata } from "next"
 
@@ -19,6 +20,7 @@ export default function ComercializadoraPage() {
     <div className="flex flex-col min-h-screen">
       <ComercializadoraHero />
       <ChannelsSection />
+      <DistributionSchema />
       <ProductCarousel />
     </div>
   )

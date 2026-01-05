@@ -9,13 +9,13 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Monster Media | Innovación y Tecnología para LATAM",
   description:
-    "Ecosistema PRIMO (PRIMO PRINT 3D + PRIMO PROTECT + PRIMO POLISH), soluciones interactivas y robótica. Innovación, tecnología y representación de marcas para México y Latinoamérica.",
+    "Ecosistema PRIMO (PRIMO PRINT 3D + PRIMO PROTECT + PRIMO CRAFT), soluciones interactivas y robótica. Innovación, tecnología y representación de marcas para México y Latinoamérica.",
   keywords: [
     "PRIMO 3D",
     "PRIMO PROTECT",
-    "PRIMO POLISH",
+    "PRIMO CRAFT",
     "impresión 3D",
-    "pulido de pantallas",
+    "personalización UV",
     "tecnología México",
     "innovación LATAM",
     "Monster Media",

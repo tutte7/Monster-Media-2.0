@@ -46,13 +46,17 @@ export function TopicsSection() {
 
         <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {topics.map((topic) => (
-            <Card key={topic.slug} className="overflow-hidden border border-border py-0">
-              <div className="aspect-[16/9] w-full bg-card/50">
-                <img src={topic.image} alt={topic.title as string} className="h-full w-full object-cover" />
+            <Card key={topic.slug} className="overflow-hidden border border-border py-0 gap-0 flex flex-col h-full">
+              <div className="relative w-full pt-[56.25%] bg-card/50 overflow-hidden">
+                <img 
+                  src={topic.image} 
+                  alt={topic.title as string} 
+                  className="absolute inset-0 h-full w-full object-cover" 
+                />
               </div>
-              <div className="p-6">
+              <div className="p-6 flex flex-col flex-1">
                 <h3 className="text-2xl font-bold font-[family-name:var(--font-space-grotesk)]">{topic.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{topic.summary}</p>
+                <p className="mt-2 text-sm text-muted-foreground flex-1">{topic.summary}</p>
                 <div className="mt-6 flex gap-3">
                   <Button asChild>
                     <Link href={topic.slug}>

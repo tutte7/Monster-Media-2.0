@@ -87,7 +87,7 @@ export default function PrimoPrint3DPage() {
 
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden border border-border bg-card/50">
-                <img src={`${base}/Banner-Email.jpeg`} alt="PRIMO PRINT 3D" className="h-full w-full object-cover" />
+                <img src="/primo-3d-hd.png" alt="PRIMO PRINT 3D" className="h-full w-full object-cover" />
               </div>
             </div>
           </div>
