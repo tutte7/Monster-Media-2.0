@@ -56,7 +56,7 @@ export default function KioskosPage() {
               {t({ es: "Interactivos", en: "Interactives" })}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight text-balance">
-              Centros de Carga Interactivos
+              {t({ es: "Centros de Carga Interactivos", en: "Interactive Charging Hubs" })}
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
               {t({

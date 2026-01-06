@@ -1,14 +1,13 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HeroBackground } from "@/components/ui/hero-background"
-
-export const metadata = {
-  title: "Mundial FIFA Rusia 2018 | Monster Mobile",
-  description:
-    "Producción de micas con diseños exclusivos de la Selección Mexicana; ventas 13,000+ en Liverpool, Amazon y FanFest.",
-}
+import { useLanguage } from "@/lib/language-context"
 
 export default function FifaRussia2018Page() {
+  const { t } = useLanguage()
+
   const gallery = [
     "/portada-rusia.png",
     "/fifa-world-cup-2018-stadium-with-customized-phones.jpg",
@@ -33,18 +32,23 @@ export default function FifaRussia2018Page() {
               Monster Mobile
             </div>
             <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight text-balance">
-              Mundial FIFA Rusia 2018
+              {t({ es: "Mundial FIFA Rusia 2018", en: "FIFA World Cup Russia 2018" })}
             </h1>
             <p className="text-lg text-muted-foreground">
-              Micas con 3 diseños exclusivos de la Selección Mexicana, disponibles para cualquier modelo. Puntos de venta: Liverpool, Amazon.com.mx y la Tienda Oficial en el FanFest del Zócalo. Más de 13,000 unidades vendidas.
+              {t({
+                es: "Micas con 3 diseños exclusivos de la Selección Mexicana, disponibles para cualquier modelo. Puntos de venta: Liverpool, Amazon.com.mx y la Tienda Oficial en el FanFest del Zócalo. Más de 13,000 unidades vendidas.",
+                en: "Screen protectors with 3 exclusive Mexican National Team designs, available for any model. Points of sale: Liverpool, Amazon.com.mx, and the Official Store at the FanFest in Zócalo. More than 13,000 units sold.",
+              })}
             </p>
             <div className="flex gap-3">
               <Button asChild>
-                <Link href="/contacto">Quiero algo similar</Link>
+                <Link href="/contacto">
+                  {t({ es: "Quiero algo similar", en: "I want something similar" })}
+                </Link>
               </Button>
               <Button variant="outline" asChild>
                 <a href="https://luisgarciamoreno95.wixsite.com/monster1/mundial-fifa-russia-2018" target="_blank" rel="noreferrer">
-                  Fuente
+                  {t({ es: "Fuente", en: "Source" })}
                 </a>
               </Button>
             </div>

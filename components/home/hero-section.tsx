@@ -6,9 +6,43 @@ import { ArrowRight, MessageCircle } from "lucide-react"
 import Link from "next/link"
 import { HeroBackground } from "@/components/ui/hero-background"
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/motion-wrapper"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel"
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+const homeImages = [
+  "/img-carrousel-home/_DSC8514-Edit 2.jpeg",
+  "/img-carrousel-home/_DSC8637-20 copy 2.jpeg",
+  "/img-carrousel-home/_DSC8822-32 copy 2.jpeg",
+  "/img-carrousel-home/img3carr.png",
+]
 
 export function HeroSection() {
   const { t } = useLanguage()
+  const [api, setApi] = React.useState<CarouselApi>()
+  const [current, setCurrent] = React.useState(0)
+
+  React.useEffect(() => {
+    if (!api) return
+
+    const timer = setInterval(() => {
+      api.scrollNext()
+    }, 4000)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+
+    return () => clearInterval(timer)
+  }, [api])
 
   return (
     <section className="relative min-h-[95vh] flex items-center justify-center overflow-hidden bg-background">
@@ -68,22 +102,48 @@ export function HeroSection() {
             </StaggerItem>
           </StaggerContainer>
 
-          {/* Visual indicators */}
-          <FadeIn delay={0.8} direction="up">
-            <div className="pt-16 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground font-mono">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/5 backdrop-blur-sm">
-                <div className="h-2 w-2 rounded-full bg-primary shadow-[0_0_10px_var(--primary)] animate-pulse" />
-                <span>{t({ es: "Ecosistema PRIMO", en: "PRIMO Ecosystem" })}</span>
+          {/* Modern Minimalist Carousel */}
+          <FadeIn delay={0.8} direction="up" className="pt-16 max-w-4xl mx-auto w-full px-4">
+            <Carousel
+              setApi={setApi}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full"
+            >
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {homeImages.map((src, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                    <div className="p-1">
+                      <div className="relative aspect-video overflow-hidden rounded-xl border border-white/10 bg-white/5 backdrop-blur-md group shadow-2xl">
+                        <img
+                          src={src}
+                          alt={`Gallery image ${index + 1}`}
+                          className="object-cover w-full h-full transition-all duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex items-center justify-center gap-4 mt-8">
+                <CarouselPrevious className="static translate-y-0 h-10 w-10 border-white/5 bg-white/5 hover:bg-primary hover:text-primary-foreground transition-all duration-300" />
+                <div className="flex gap-1.5 px-3 py-1.5 rounded-full bg-white/5 border border-white/10">
+                  {homeImages.map((_, i) => (
+                    <div
+                      key={i}
+                      className={cn(
+                        "h-1.5 w-1.5 rounded-full transition-all duration-300",
+                        current === i ? "bg-primary w-3" : "bg-white/20"
+                      )}
+                    />
+                  ))}
+                </div>
+                <CarouselNext className="static translate-y-0 h-10 w-10 border-white/5 bg-white/5 hover:bg-primary hover:text-primary-foreground transition-all duration-300" />
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/5 backdrop-blur-sm">
-                <div className="h-2 w-2 rounded-full bg-[#44962a] shadow-[0_0_10px_#44962a] animate-pulse" />
-                <span>{t({ es: "Impresión UV", en: "UV Printing" })}</span>
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/5 backdrop-blur-sm">
-                <div className="h-2 w-2 rounded-full bg-white shadow-[0_0_10px_white] animate-pulse" />
-                <span>{t({ es: "Robótica", en: "Robotics" })}</span>
-              </div>
-            </div>
+            </Carousel>
           </FadeIn>
         </div>
       </div>

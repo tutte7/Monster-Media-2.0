@@ -1,7 +1,6 @@
 import { InteractivosHero } from "@/components/interactivos/hero"
 import { TopicsSection } from "@/components/interactivos/topics-section"
 import { RoboticsHero } from "@/components/robotics/hero"
-import { RoboticsVideosSection } from "@/components/robotics/videos-section"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -22,7 +21,6 @@ export default function MonsterMediaPage() {
       <TopicsSection />
       <div className="w-full h-px bg-border my-8" /> {/* Separator for visual clarity */}
       <RoboticsHero />
-      <RoboticsVideosSection />
     </div>
   )
 }

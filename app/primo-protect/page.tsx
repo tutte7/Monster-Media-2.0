@@ -1,22 +1,20 @@
+"use client"
+
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-
-export const metadata = {
-  title: "PRIMO PROTECT | Monster Media",
-  description:
-    "Protección superior y avanzada para pantallas. Fabricado con material flexible de alta densidad.",
-}
-
+import { useLanguage } from "@/lib/language-context"
 import { HeroBackground } from "@/components/ui/hero-background"
 
 export default function PrimoProtectPage() {
+  const { t } = useLanguage()
   const base = "/Im%C3%A1genes%20Red%20Wolf-20251024T151820Z-1-001/Im%C3%A1genes%20Red%20Wolf"
 
   const bullets = [
-    // ... (content omitted for brevity in prompt, but in tool call I assume context is sufficient or I should be careful)
-    // Actually, strict replacement:
-    "Corte on‑demand para cualquier modelo",
+    t({ es: "Protección premium contra impactos", en: "Premium impact protection" }),
+    t({ es: "Claridad óptica total", en: "Total optical clarity" }),
+    t({ es: "Autocuración de pequeños rayones", en: "Self-healing of minor scratches" }),
+    t({ es: "Corte on‑demand para cualquier modelo", en: "On-demand cutting for any model" }),
   ]
 
   const gallery = [
@@ -41,7 +39,10 @@ export default function PrimoProtectPage() {
                 Faster. Easier. Better.
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                Protección superior y avanzada para pantallas. Fabricado con material flexible de alta densidad que garantiza protección contra rasguños, grietas, polvo y burbujas.
+                {t({
+                  es: "Protección superior y avanzada para pantallas. Fabricado con material flexible de alta densidad que garantiza protección contra rasguños, grietas, polvo y burbujas.",
+                  en: "Superior and advanced screen protection. Made with high-density flexible material that guarantees protection against scratches, cracks, dust, and bubbles.",
+                })}
               </p>
 
               <ul className="mt-6 grid gap-3">
@@ -56,7 +57,7 @@ export default function PrimoProtectPage() {
               <div className="mt-8 flex gap-3">
                 <Button asChild>
                   <Link href="/contacto">
-                    Contáctanos
+                    {t({ es: "Contáctanos", en: "Contact Us" })}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

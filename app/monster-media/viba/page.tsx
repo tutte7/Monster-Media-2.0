@@ -1,31 +1,37 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { HeroBackground } from "@/components/ui/hero-background"
-
-export const metadata = {
-  title: "Viba | Interactivos",
-  description:
-    "Atención al cliente 24/7 sin contacto, actualizaciones en tiempo real, promociones, call center virtual y analítica.",
-}
+import { useLanguage } from "@/lib/language-context"
 
 export default function VibaPage() {
+  const { t } = useLanguage()
+
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden bg-background">
         <HeroBackground />
         <div className="container relative z-10 mx-auto px-4 py-16">
           <div className="max-w-5xl mx-auto space-y-6">
-            <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">Interactivos</div>
+            <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              {t({ es: "Interactivos", en: "Interactives" })}
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight text-balance">Viba</h1>
             <p className="text-lg text-muted-foreground">
-              Servicios digitales que evolucionan mercados globales: atención al cliente 24/7 sin contacto, actualizaciones en tiempo real, promociones y call center virtual. Recaba información clave y gestiona campañas.
+              {t({
+                es: "Servicios digitales que evolucionan mercados globales: atención al cliente 24/7 sin contacto, actualizaciones en tiempo real, promociones y call center virtual. Recaba información clave y gestiona campañas.",
+                en: "Digital services that evolve global markets: 24/7 contactless customer service, real-time updates, promotions, and virtual call centers. Gather key information and manage campaigns.",
+              })}
             </p>
             <div className="flex gap-3">
               <Button asChild>
-                <Link href="/contacto">Solicitar demo</Link>
+                <Link href="/contacto">{t({ es: "Solicitar demo", en: "Request demo" })}</Link>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://luisgarciamoreno95.wixsite.com/monster1/viba" target="_blank" rel="noreferrer">Fuente</a>
+                <a href="https://luisgarciamoreno95.wixsite.com/monster1/viba" target="_blank" rel="noreferrer">
+                  {t({ es: "Fuente", en: "Source" })}
+                </a>
               </Button>
             </div>
           </div>

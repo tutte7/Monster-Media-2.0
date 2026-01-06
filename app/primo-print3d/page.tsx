@@ -1,24 +1,21 @@
+"use client"
+
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-
-export const metadata = {
-  title: "PRIMO PRINT 3D | Monster Media",
-  description:
-    "Tecnología de impresión 3D de última generación para fabricar fundas para celulares.",
-}
-
+import { useLanguage } from "@/lib/language-context"
 import { HeroBackground } from "@/components/ui/hero-background"
 
 export default function PrimoPrint3DPage() {
+  const { t } = useLanguage()
   const base = "/Im%C3%A1genes%20Red%20Wolf-20251024T151820Z-1-001/Im%C3%A1genes%20Red%20Wolf"
 
   const bullets = [
-    "Cualquier dispositivo (biblioteca de miles de modelos)",
-    "Protección confiable, bumper o full case",
-    "On‑demand: menos inventario y desperdicio",
-    "Velocidad: impresión en minutos",
-    "Personalizable y rentable en retail",
+    t({ es: "Cualquier dispositivo (biblioteca de miles de modelos)", en: "Any device (library of thousands of models)" }),
+    t({ es: "Protección confiable, bumper o full case", en: "Reliable protection, bumper or full case" }),
+    t({ es: "On‑demand: menos inventario y desperdicio", en: "On-demand: less inventory and waste" }),
+    t({ es: "Velocidad: impresión en minutos", en: "Speed: printing in minutes" }),
+    t({ es: "Personalizable y rentable en retail", en: "Customizable and profitable in retail" }),
   ]
 
   const gallery = [
@@ -55,10 +52,13 @@ export default function PrimoPrint3DPage() {
                 PRIMO PRINT 3D
               </div>
               <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight text-balance">
-                The phone case of the future
+                {t({ es: "La funda del futuro", en: "The phone case of the future" })}
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                Tecnología de impresión 3D de última generación para fabricar fundas para celulares.
+                {t({
+                  es: "Tecnología de impresión 3D de última generación para fabricar fundas para celulares.",
+                  en: "State-of-the-art 3D printing technology to manufacture cell phone cases.",
+                })}
               </p>
 
               <ul className="mt-6 grid gap-3">
@@ -73,7 +73,7 @@ export default function PrimoPrint3DPage() {
               <div className="mt-8 flex gap-3">
                 <Button asChild>
                   <Link href="/contacto">
-                    Contáctanos
+                    {t({ es: "Contáctanos", en: "Contact Us" })}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>

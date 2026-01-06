@@ -68,7 +68,7 @@ export function MonsterMobileHero() {
               </div>
               <div className="text-left">
                 <div className="font-semibold whitespace-nowrap">
-                  {t({ es: "Producción on demand", en: "On-demand production" })}
+                  {t({ es: "Producción On-Demand", en: "On-Demand production" })}
                 </div>
                 <div className="text-sm text-muted-foreground">
                   {t({ es: "Sin inventario, listo en minutos", en: "No inventory, ready in minutes" })}

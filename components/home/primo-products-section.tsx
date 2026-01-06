@@ -44,13 +44,13 @@ export function PrimoProductsSection() {
     {
       slug: "#",
       name: "PRIMO CRAFT",
-      tagline: t({ es: "Personalización UV de Alta Calidad", en: "High Quality UV Customization" }),
+      tagline: t({ es: "Impresión 3D Industrial de Alta Precisión", en: "High Precision Industrial 3D Printing" }),
       bulletPoints: [
-        t({ es: "Impresión UV directa sobre cualquier superficie", en: "Direct UV printing on any surface" }),
-        t({ es: "Colores vibrantes y duraderos", en: "Vibrant and durable colors" }),
-        t({ es: "Resolución fotográfica de alta precisión", en: "High precision photographic resolution" }),
-        t({ es: "Ideal para fundas, accesorios y más", en: "Ideal for cases, accessories and more" }),
-        t({ es: "Proceso rápido y automatizado", en: "Fast and automated process" }),
+        t({ es: "Resolución de hasta 50 micras", en: "Resolution up to 50 microns" }),
+        t({ es: "Volumen de construcción de 1m³", en: "1m³ build volume" }),
+        t({ es: "Materiales: PLA, ABS, PETG, TPU", en: "Materials: PLA, ABS, PETG, TPU" }),
+        t({ es: "Ideal para prototipos y producción", en: "Ideal for prototypes and production" }),
+        t({ es: "Tecnología de última generación", en: "State-of-the-art technology" }),
       ],
       image: "/primo-craft-hd.png",
       cta: t({ es: "Ver más", en: "Learn more" }),
@@ -70,8 +70,8 @@ export function PrimoProductsSection() {
             </h2>
             <p className="mt-3 text-muted-foreground">
               {t({
-                es: "El primer ecosistema on demand para accesorios de telefono",
-                en: "The first on-demand ecosystem for phone accessories",
+                es: "El primer ecosistema On-Demand para accesorios de teléfono",
+                en: "The first On-Demand ecosystem for phone accessories",
               })}
             </p>
           </div>

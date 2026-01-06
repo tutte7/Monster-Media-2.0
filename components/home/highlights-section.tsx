@@ -3,8 +3,9 @@
 import { useLanguage } from "@/lib/language-context"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Calendar, ArrowRight } from "lucide-react"
+import { Calendar, ArrowRight, PlayCircle } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export function HighlightsSection() {
   const { t } = useLanguage()
@@ -19,15 +20,15 @@ export function HighlightsSection() {
     {
       category: { es: "Caso de Estudio", en: "Case Study" },
       title: {
-        es: "Impresión UV",
-        en: "UV Printing",
+        es: "Impresión 3D",
+        en: "3D Printing",
       },
       description: {
-        es: "Proyecto masivo de personalización para cliente corporativo",
-        en: "Massive customization project for corporate client",
+        es: "Tecnología de impresión 3D de última generación para fabricar fundas de celulares",
+        en: "Next-generation 3D printing technology for manufacturing phone cases",
       },
       date: "2024",
-      video: "#",
+      video: "https://www.youtube.com/watch?v=zTcx2hl7Qv0",
     },
     {
       category: { es: "Caso de Estudio", en: "Case Study" },
@@ -40,7 +41,7 @@ export function HighlightsSection() {
         en: "Deployment of protection and on-demand cutting stations across retail stores.",
       },
       date: "2025",
-      video: "https://www.dropbox.com/scl/fi/hn4mxrygzy108ce3vdg5l/CV_1010-PROTECT-MY-IPHONE-999.mp4?rlkey=0e93a4xm6xq0mmquqsp3uqw4v&st=esjb5le6&dl=0",
+      video: "https://www.youtube.com/watch?v=9GcKPEHx73w",
     },
     {
       category: { es: "Innovación", en: "Innovation" },
@@ -71,12 +72,12 @@ export function HighlightsSection() {
     {
       category: { es: "Tecnología", en: "Technology" },
       title: {
-        es: "Interactivos de realidad aumentada",
-        en: "Augmented reality interactive",
+        es: "Centros de carga interactivos",
+        en: "Interactive charging hubs",
       },
       description: {
-        es: "Soluciones interactivas de última generación",
-        en: "Next-generation interactive solutions",
+        es: "Soluciones de carga segura y comunicación digital para marcas.",
+        en: "Secure charging and digital communication solutions for brands.",
       },
       date: "2024",
       video: "https://www.youtube.com/watch?v=5ueP_qWTJbg",
@@ -96,96 +97,147 @@ export function HighlightsSection() {
     },
   ]
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const item = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 }
+  }
+
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(163,196,19,0.05)_0%,transparent_50%)]" />
+      
+      <div className="container relative z-10 mx-auto px-4">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] mb-4 text-balance">
-            {t({
-              es: "Proyectos Destacados",
-              en: "Featured Projects",
-            })}
-          </h2>
-          <p className="text-lg text-muted-foreground text-pretty">
-            {t({
-              es: "Descubre algunos de nuestros proyectos más innovadores",
-              en: "Discover some of our most innovative projects",
-            })}
-          </p>
+        <div className="max-w-3xl mx-auto text-center mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] mb-6 tracking-tight">
+              {t({
+                es: "Proyectos Destacados",
+                en: "Featured Projects",
+              })}
+            </h2>
+            <div className="h-1.5 w-24 bg-primary mx-auto rounded-full mb-8" />
+            <p className="text-xl text-muted-foreground leading-relaxed">
+              {t({
+                es: "Innovación y tecnología aplicada a experiencias de marca inolvidables.",
+                en: "Innovation and technology applied to unforgettable brand experiences.",
+              })}
+            </p>
+          </motion.div>
         </div>
 
         {/* Highlights Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+        <motion.div 
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16"
+        >
           {highlights.map((highlight, index) => (
-            <Card key={index} className="p-6 hover:border-primary transition-all duration-300 group flex flex-col">
-              <div className="flex items-center gap-2 text-sm text-primary mb-3">
-                <Calendar className="h-4 w-4" />
-                <span>{highlight.date}</span>
-              </div>
-              <div className="inline-block px-3 py-1 bg-secondary rounded-full text-xs font-medium mb-4 w-fit">
-                {t(highlight.category)}
-              </div>
-              <h3 className="text-xl font-bold font-[family-name:var(--font-space-grotesk)] mb-3 group-hover:text-primary transition-colors">
-                {t(highlight.title)}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">{t(highlight.description)}</p>
-              
-              {highlight.video !== "#" && (
-                <div className="mt-auto">
-                  <div className="aspect-video w-full overflow-hidden rounded-lg bg-muted border border-border mb-3">
-                    {highlight.video.includes("youtube.com") || highlight.video.includes("youtu.be") ? (
-                      <iframe
-                        className="w-full h-full"
-                        src={getYouTubeEmbedUrl(highlight.video)}
-                        title={t(highlight.title)}
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    ) : highlight.video.includes("dropbox.com") ? (
-                      <video
-                        className="w-full h-full object-cover"
-                        controls
-                        preload="metadata"
-                      >
-                        <source src={highlight.video.replace("dl=0", "raw=1")} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                    ) : (
-                      <Button variant="outline" size="sm" className="w-full group/btn" asChild>
-                        <a href={highlight.video} target="_blank" rel="noopener noreferrer">
-                          {t({ es: "Ver Video", en: "Watch Video" })}
-                          <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                  {(highlight.video.includes("youtube.com") || highlight.video.includes("youtu.be")) && (
-                    <a 
-                      href={highlight.video} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-xs text-muted-foreground hover:text-primary flex items-center justify-center gap-1 transition-colors"
-                    >
-                      {t({ es: "Ver en YouTube", en: "Watch on YouTube" })}
-                      <ArrowRight className="h-3 w-3" />
-                    </a>
+            <motion.div variants={item} key={index}>
+              <Card className="group h-full flex flex-col overflow-hidden border-white/5 bg-zinc-900/40 backdrop-blur-sm hover:border-primary/50 transition-all duration-500 shadow-2xl p-0">
+                {/* Video/Image Header */}
+                <div className="relative aspect-video overflow-hidden bg-black w-full">
+                  {highlight.video !== "#" ? (
+                    <div className="w-full h-full">
+                      {highlight.video.includes("youtube.com") || highlight.video.includes("youtu.be") ? (
+                        <iframe
+                          className="w-full h-full opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                          src={getYouTubeEmbedUrl(highlight.video)}
+                          title={t(highlight.title)}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      ) : (
+                        <video
+                          className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
+                          controls={false}
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                        >
+                          <source src={highlight.video.replace("dl=0", "raw=1")} type="video/mp4" />
+                        </video>
+                      )}
+                    </div>
+                  ) : (
+                    <div className="w-full h-full bg-primary/5 flex items-center justify-center">
+                      <PlayCircle className="w-12 h-12 text-primary/20" />
+                    </div>
                   )}
+                  
+                  {/* Floating Category */}
+                  <div className="absolute top-4 left-4 z-20">
+                    <span className="px-3 py-1 bg-primary/90 text-primary-foreground text-[10px] uppercase tracking-wider font-bold rounded-full backdrop-blur-md">
+                      {t(highlight.category)}
+                    </span>
+                  </div>
                 </div>
-              )}
-            </Card>
+
+                {/* Content */}
+                <div className="px-6 py-5 flex flex-col flex-grow">
+                  <div className="flex items-center gap-2 text-xs text-primary/60 mb-2 font-medium">
+                    <Calendar className="h-3.5 w-3.5" />
+                    <span>{highlight.date}</span>
+                  </div>
+                  
+                  <h3 className="text-lg font-bold font-[family-name:var(--font-space-grotesk)] mb-2 leading-tight group-hover:text-primary transition-colors duration-300">
+                    {t(highlight.title)}
+                  </h3>
+                  
+                  <p className="text-muted-foreground text-xs leading-relaxed mb-4 flex-grow line-clamp-2">
+                    {t(highlight.description)}
+                  </p>
+                  
+                  <div className="pt-3 border-t border-white/5 flex items-center justify-between">
+                    <Link 
+                      href={highlight.video !== "#" ? highlight.video : "/experiencia"}
+                      target={highlight.video !== "#" ? "_blank" : "_self"}
+                      className="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-primary hover:text-primary/80 transition-colors group/link"
+                    >
+                      {highlight.video !== "#" ? t({ es: "Ver Proyecto", en: "View Project" }) : t({ es: "Saber más", en: "Learn more" })}
+                      <ArrowRight className="ml-2 h-3 w-3 transition-transform group-hover/link:translate-x-1" />
+                    </Link>
+                  </div>
+                </div>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* CTA */}
-        <div className="text-center">
-          <Button size="lg" asChild>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="text-center"
+        >
+          <Button size="lg" className="rounded-full px-8 h-14 text-base font-bold shadow-xl shadow-primary/20 transition-all hover:scale-105" asChild>
             <Link href="/experiencia">
-              {t({ es: "Ver Todos los Proyectos", en: "View All Projects" })}
+              {t({ es: "Explorar Portfolio Completo", en: "Explore Full Portfolio" })}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,19 +1,11 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-
-export const metadata = {
-  title: "MotionSphere | Interactivos",
-  description:
-    "Activaciones inmersivas con simuladores de alto impacto. Ejecución para marcas líderes con despliegue multi‑tienda.",
-}
+import { useLanguage } from "@/lib/language-context"
 
 export default function MotionSpherePage() {
-  const gallery = [
-    "/gamification-experience-at-event.jpg",
-    "/interactive-game-with-brand-elements.jpg",
-    "/interactive-table-at-corporate-event.jpg",
-    "/interactive-table-with-multiple-users.jpg",
-  ]
+  const { t } = useLanguage()
 
   const videos = [
     {
@@ -32,43 +24,41 @@ export default function MotionSpherePage() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#a3c4130a_1px,transparent_1px),linear-gradient(to_bottom,#a3c4130a_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         <div className="container relative z-10 mx-auto px-4 py-16">
           <div className="max-w-5xl mx-auto space-y-6">
-            <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">Interactivos</div>
+            <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
+              {t({ es: "Interactivos", en: "Interactives" })}
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight text-balance">MotionSphere</h1>
             <p className="text-lg text-muted-foreground">
-              Una experiencia inmersiva que transforma el entorno en un simulador interactivo permitiendo a los usuarios vivir emociones de alta intensidad a través de tecnología de realidad aumentada que combina movimiento, visuales envolventes y entretenimiento de última generación.
+              {t({
+                es: "Una experiencia inmersiva que transforma el entorno en un simulador interactivo permitiendo a los usuarios vivir emociones de alta intensidad a través de tecnología de realidad aumentada que combina movimiento, visuales envolventes y entretenimiento de última generación.",
+                en: "An immersive experience that transforms the environment into an interactive simulator allowing users to experience high-intensity emotions through augmented reality technology that combines movement, immersive visuals, and state-of-the-art entertainment.",
+              })}
             </p>
             <div className="flex gap-3">
               <Button asChild>
-                <Link href="/contacto">Solicitar demo</Link>
+                <Link href="/contacto">{t({ es: "Solicitar demo", en: "Request demo" })}</Link>
               </Button>
               <Button variant="outline" asChild>
-                <a href="https://luisgarciamoreno95.wixsite.com/monster1/motionsphere" target="_blank" rel="noreferrer">Fuente</a>
+                <a href="https://luisgarciamoreno95.wixsite.com/monster1/motionsphere" target="_blank" rel="noreferrer">
+                  {t({ es: "Fuente", en: "Source" })}
+                </a>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {gallery.map((src) => (
-              <div key={src} className="aspect-[3/4] rounded-xl overflow-hidden border border-border bg-card/50">
-                <img src={src} alt="MotionSphere" className="h-full w-full object-cover" />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-20">
+      <section className="pb-20 pt-8">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold font-[family-name:var(--font-space-grotesk)]">
-              Videos MotionSphere
+              {t({ es: "Videos MotionSphere", en: "MotionSphere Videos" })}
             </h2>
             <p className="text-muted-foreground mt-3">
-              Demostraciones en acción para campañas y activaciones.
+              {t({
+                es: "Demostraciones en acción para campañas y activaciones.",
+                en: "Demonstrations in action for campaigns and activations.",
+              })}
             </p>
           </div>
 

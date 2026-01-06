@@ -27,12 +27,12 @@ export function LatamPresence() {
     },
     {
       icon: Award,
-      value: "25+",
+      value: "+25",
       label: { es: "Años de Experiencia", en: "Years of Experience" },
     },
     {
       icon: ShieldCheck,
-      value: "5M+",
+      value: "+5M",
       label: { es: "Dispositivos Protegidos", en: "Protected Devices" },
     },
   ]
@@ -62,19 +62,17 @@ export function LatamPresence() {
       id: "sv",
       name: { es: "El Salvador", en: "El Salvador" },
       flag: "🇸🇻",
-      stores: ["Próximamente"],
+      stores: ["Samsung", "Claro"],
       left: "41.5%",
       top: "20.5%",
-      comingSoon: true,
     },
     {
       id: "cr",
       name: { es: "Costa Rica", en: "Costa Rica" },
       flag: "🇨🇷",
-      stores: ["Próximamente"],
+      stores: ["Samsung", "Claro"],
       left: "44%",
       top: "25%",
-      comingSoon: true,
     },
     {
       id: "cl",
@@ -96,19 +94,17 @@ export function LatamPresence() {
       id: "co",
       name: { es: "Colombia", en: "Colombia" },
       flag: "🇨🇴",
-      stores: ["Próximamente"],
+      stores: ["Samsung", "Claro"],
       left: "49%",
       top: "31%",
-      comingSoon: true,
     },
     {
       id: "pe",
       name: { es: "Perú", en: "Peru" },
       flag: "🇵🇪",
-      stores: ["Próximamente"],
+      stores: ["Samsung", "Claro"],
       left: "48%",
       top: "46%",
-      comingSoon: true,
     },
     {
       id: "br",
@@ -150,9 +146,9 @@ export function LatamPresence() {
           {stats.map((stat, index) => {
             const Icon = stat.icon
             return (
-              <div key={index} className="group relative">
+              <div key={index} className="group relative h-full">
                 <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative text-center p-4 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/20 transition-colors duration-300">
+                <div className="relative h-full text-center p-4 rounded-2xl border border-white/5 bg-white/5 backdrop-blur-sm hover:border-primary/20 transition-colors duration-300 flex flex-col items-center justify-center">
                   <div className="inline-flex p-3 bg-primary/10 rounded-xl mb-3 group-hover:scale-110 transition-transform duration-300">
                     <Icon className="h-6 w-6 text-primary" />
                   </div>

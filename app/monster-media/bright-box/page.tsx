@@ -8,12 +8,9 @@ export default function BrightBoxPage() {
   const { t } = useLanguage()
 
   const gallery = [
-    "/portada-Bright Box.jpg",
-    "/multiple-kiosks-in-retail-environment.jpg",
-    "/interactive-kiosk-in-shopping-mall.jpg",
-    "/modern-self-service-kiosk-design.jpg",
-    "/touchscreen-kiosk-with-customer-interaction.jpg",
-    "/digital-signage-display-in-store.jpg",
+    "/img-Bright-box/atyt.png",
+    "/img-Bright-box/mdc.png",
+    "/img-Bright-box/mdcr.png",
   ]
 
   const features = [
@@ -84,7 +81,7 @@ export default function BrightBoxPage() {
       </section>
 
       <section className="py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
               <div key={feature.title} className="space-y-3">
@@ -97,13 +94,13 @@ export default function BrightBoxPage() {
       </section>
 
       <section className="py-16 border-t border-border">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold mb-8 font-[family-name:var(--font-space-grotesk)]">
             {t({ es: "Galería", en: "Gallery" })}
           </h2>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {gallery.map((src) => (
-              <div key={src} className="aspect-[3/4] rounded-xl overflow-hidden border border-border bg-card/50">
+              <div key={src} className="aspect-[4/5] rounded-2xl overflow-hidden border border-border bg-card/50 shadow-sm">
                 <img src={src} alt="Bright Box" className="h-full w-full object-cover" />
               </div>
             ))}
