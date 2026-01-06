@@ -8,24 +8,27 @@ export function PartnersGrid() {
 
   const partners = [
     { name: "Xiaomi", logo: "/Nuestros-Socios/Logo-xiaomi.png" },
-    { name: "PRIMO CRAFT", logo: "/primo-craft-hd.png" },
-    { name: "PRIMO PROTECT", logo: "/Nuestros-Socios/Logo-Primo-Protect.png" },
-    { name: "OPPO", logo: "/Nuestros-Socios/Logo-oppo.png" },
+    { name: "Samsung", logo: "/Nuestros-Socios/Logo-samsung.png" },
     { name: "Vivo", logo: "/Nuestros-Socios/Logo-vivo.png" },
-    { name: "Argon Tec", logo: "/Nuestros-Socios/Logo-argom.png" },
+    { name: "OPPO", logo: "/Nuestros-Socios/Logo-oppo.png" },
+    { name: "Argom", logo: "/Nuestros-Socios/Logo-argom.png" },
+    { name: "Primo Protect", logo: "/Nuestros-Socios/Logo-Primo-Protect.png" },
+    { name: "Primo Craft", logo: "/Nuestros-Socios/Primo-Craft-Pruea.png" },
+    { name: "Primo 3D", logo: "/Nuestros-Socios/Logo-Primo3d.png" },
+    { name: "Red Wolf", logo: "/Nuestros-Socios/Logo-red-wolf.png" },
   ]
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-black">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] mb-4 text-balance">
+        <div className="max-w-3xl mx-auto text-center mb-24">
+          <h2 className="text-4xl md:text-5xl font-bold font-[family-name:var(--font-space-grotesk)] mb-6 text-white tracking-tight">
             {t({
               es: "Nuestros Partners",
               en: "Our Partners",
             })}
           </h2>
-          <p className="text-lg text-muted-foreground text-pretty">
+          <p className="text-lg text-muted-foreground/60 max-w-2xl mx-auto leading-relaxed">
             {t({
               es: "Trabajamos con las marcas más innovadoras del mercado",
               en: "We work with the most innovative brands in the market",
@@ -33,18 +36,22 @@ export function PartnersGrid() {
           </p>
         </div>
 
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-10 max-w-4xl mx-auto">
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 w-full">
           {partners.map((partner) => (
             <StaggerItem key={partner.name}>
               <div
-                className="group relative aspect-[3/2] bg-white rounded-[2.5rem] p-8 md:p-10 flex items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-500 border border-black/[0.03] overflow-hidden"
+                className="group flex flex-col items-center gap-4 transition-all duration-500 hover:-translate-y-1"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/[0.01] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <img
-                  src={partner.logo || `/placeholder.svg?height=80&width=160&query=${partner.name} logo`}
-                  alt={`${partner.name} logo`}
-                  className="relative z-10 max-w-full max-h-full object-contain transition-all duration-500 group-hover:scale-110"
-                />
+                <div className="h-20 md:h-24 w-full flex items-center justify-center">
+                  <img
+                    src={partner.logo || `/placeholder.svg?height=80&width=160&query=${partner.name} logo`}
+                    alt={`${partner.name} logo`}
+                    className="max-h-full w-auto max-w-[85%] object-contain opacity-80 group-hover:opacity-100 transition-all duration-500 rounded-[20px]"
+                  />
+                </div>
+                <span className="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] text-muted-foreground/30 group-hover:text-primary transition-colors duration-500 text-center">
+                  {partner.name}
+                </span>
               </div>
             </StaggerItem>
           ))}
