@@ -59,8 +59,8 @@ export default function ClimbingWallPage() {
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
               {t({
-                es: "Augmented Climbing Wall es la primera plataforma de juegos para muros de escalar del mundo. Esta tecnología transforma cualquier muro de escalada en una pantalla interactiva gigante, combinando el ejercicio físico con la gamificación.",
-                en: "Augmented Climbing Wall is the world's first game platform for climbing walls. This technology transforms any climbing wall into a giant interactive screen, combining physical exercise with gamification.",
+                es: "Primera plataforma de juegos para muros de escalar en el mundo. Esta dinámica interactiva invita a todo publico, desde los niños mas jovenes, hasta los adultos físicamente activos a tener una experiencia divertida mientras realizan actividad física.",
+                en: "The world's first game platform for climbing walls. This interactive dynamic invites all audiences, from the youngest children to physically active adults, to have a fun experience while performing physical activity.",
               })}
             </p>
             <div className="flex gap-3">

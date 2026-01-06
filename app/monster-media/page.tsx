@@ -7,7 +7,7 @@ import type { Metadata } from "next"
 export const metadata: Metadata = {
   title: "Monster Media | Soluciones Interactivas y Robótica",
   description:
-    "Soluciones tecnológicas interactivas, kioskos, digital signage, realidad aumentada y robótica de servicio avanzada.",
+    "Soluciones tecnológicas interactivas, centros de carga interactivos, digital signage, realidad aumentada y robótica de servicio avanzada.",
   openGraph: {
     title: "Monster Media | Soluciones Interactivas y Robótica",
     description: "Integrando tecnología interactiva y robótica para transformar experiencias.",

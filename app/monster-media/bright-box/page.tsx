@@ -12,6 +12,8 @@ export default function BrightBoxPage() {
     "/multiple-kiosks-in-retail-environment.jpg",
     "/interactive-kiosk-in-shopping-mall.jpg",
     "/modern-self-service-kiosk-design.jpg",
+    "/touchscreen-kiosk-with-customer-interaction.jpg",
+    "/digital-signage-display-in-store.jpg",
   ]
 
   const features = [

@@ -27,10 +27,10 @@ export function RoboticsHero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-pretty">
+          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-pretty">
             {t({
-              es: "Somos distribuidores de robots interactivos para retail, eventos y atención al cliente.",
-              en: "We are distributors of interactive robots for retail, events, and customer engagement.",
+              es: "Implementamos experiencias inmersivas que integran tecnología y entretenimiento, diseñadas para captar la atención, generar interacción y amplificar la presencia de marca en eventos de gran escala.",
+              en: "We implement immersive experiences that integrate technology and entertainment, designed to capture attention, generate interaction, and amplify brand presence at large-scale events.",
             })}
           </p>
 

@@ -35,7 +35,7 @@ export default function MotionSpherePage() {
             <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">Interactivos</div>
             <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight text-balance">MotionSphere</h1>
             <p className="text-lg text-muted-foreground">
-              Simuladores y experiencias inmersivas que generan alto impacto y recordación de marca. Implementaciones rápidas para campañas intensivas.
+              Una experiencia inmersiva que transforma el entorno en un simulador interactivo permitiendo a los usuarios vivir emociones de alta intensidad a través de tecnología de realidad aumentada que combina movimiento, visuales envolventes y entretenimiento de última generación.
             </p>
             <div className="flex gap-3">
               <Button asChild>

@@ -12,10 +12,10 @@ export function DivisionGrid() {
     {
       id: "kioskos",
       icon: Monitor,
-      name: { es: "Kioskos", en: "Kiosks" },
+      name: { es: "Centros de Carga Interactivos", en: "Interactive Charging Hubs" },
       description: {
-        es: "Soluciones de autoservicio interactivo para retail, eventos y espacios públicos con pantallas táctiles de alta precisión.",
-        en: "Interactive self-service solutions for retail, events and public spaces with high-precision touch screens.",
+        es: "Experiencias digitales personalizadas ideal para campañas publicitarias y eventos de cualquier escala, donde la marca busca destacar y generar conexión.",
+        en: "Customized digital experiences ideal for advertising campaigns and events of any scale, where the brand seeks to stand out and generate connection.",
       },
       features: [
         { es: "Pantallas táctiles multi-touch", en: "Multi-touch screens" },

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export const metadata = {
   title: "PRIMO PRINT 3D | Monster Media",
   description:
-    "Fundas personalizadas on‑demand para cualquier dispositivo: rápidas, personalizables y más verdes.",
+    "Tecnología de impresión 3D de última generación para fabricar fundas para celulares.",
 }
 
 import { HeroBackground } from "@/components/ui/hero-background"
@@ -58,7 +58,7 @@ export default function PrimoPrint3DPage() {
                 The phone case of the future
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                Fundas personalizadas on‑demand para cualquier dispositivo. Rápidas, rentables y sostenibles.
+                Tecnología de impresión 3D de última generación para fabricar fundas para celulares.
               </p>
 
               <ul className="mt-6 grid gap-3">

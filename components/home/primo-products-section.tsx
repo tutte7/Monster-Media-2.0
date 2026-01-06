@@ -16,7 +16,7 @@ export function PrimoProductsSection() {
     {
       slug: "/primo-print3d",
       name: "PRIMO PRINT 3D",
-      tagline: t({ es: "La funda del futuro, on‑demand", en: "The phone case of the future" }),
+      tagline: t({ es: "Tecnología de impresión 3D de última generación para fabricar fundas para celulares.", en: "Next-generation 3D printing technology to manufacture phone cases." }),
       bulletPoints: [
         t({ es: "Cualquier dispositivo (biblioteca de miles de modelos)", en: "Any device (library of thousands of models)" }),
         t({ es: "Producción on‑demand, sin inventario", en: "On‑demand production, no inventory" }),
@@ -30,7 +30,7 @@ export function PrimoProductsSection() {
     {
       slug: "/primo-protect",
       name: "PRIMO PROTECT",
-      tagline: t({ es: "Protección flexible, crackless y self‑healing", en: "Flexible, crackless, self‑healing protection" }),
+      tagline: t({ es: "Protección superior y avanzada para pantallas. Fabricado con material flexible de alta densidad que garantiza protección contra rasguños, grietas, polvo y burbujas.", en: "Superior and advanced screen protection. Made of high-density flexible material that guarantees protection against scratches, cracks, dust and bubbles." }),
       bulletPoints: [
         t({ es: "Crackless: no se quiebra ni astilla", en: "Crackless: won’t crack or chip" }),
         t({ es: "Flexible y de tacto tipo vidrio", en: "Flexible with glass‑like feel" }),

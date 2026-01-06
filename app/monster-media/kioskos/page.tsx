@@ -1,9 +1,3 @@
-"use client"
-
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { useLanguage } from "@/lib/language-context"
-
 export default function KioskosPage() {
   const { t } = useLanguage()
 
@@ -56,12 +50,12 @@ export default function KioskosPage() {
               {t({ es: "Interactivos", en: "Interactives" })}
             </div>
             <h1 className="text-4xl md:text-6xl font-bold font-[family-name:var(--font-space-grotesk)] leading-tight text-balance">
-              Kioskos
+              Centros de Carga Interactivos
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
               {t({
-                es: "Nuestros kioskos interactivos combinan utilidad y marketing de alto impacto. Ofrecen servicios esenciales como carga de dispositivos mientras captan la atención del usuario con interfaces táctiles, juegos y promociones personalizadas.",
-                en: "Our interactive kiosks combine utility and high-impact marketing. They offer essential services like device charging while capturing user attention with touch interfaces, games, and personalized promotions.",
+                es: "Experiencias digitales personalizadas ideal para campañas publicitarias y eventos de cualquier escala, donde la marca busca destacar y generar conexión.",
+                en: "Customized digital experiences ideal for advertising campaigns and events of any scale, where the brand seeks to stand out and generate connection.",
               })}
             </p>
             <div className="flex gap-3">

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 export const metadata = {
   title: "PRIMO PROTECT | Monster Media",
   description:
-    "Protector flexible, crackless y self‑healing. Corte on‑demand para cualquier modelo con aplicación en seco o húmedo.",
+    "Protección superior y avanzada para pantallas. Fabricado con material flexible de alta densidad.",
 }
 
 import { HeroBackground } from "@/components/ui/hero-background"
@@ -41,7 +41,7 @@ export default function PrimoProtectPage() {
                 Faster. Easier. Better.
               </h1>
               <p className="mt-4 text-lg text-muted-foreground">
-                Protectores flexibles, con tacto tipo vidrio y tecnología self‑healing. Corte on‑demand para cualquier modelo.
+                Protección superior y avanzada para pantallas. Fabricado con material flexible de alta densidad que garantiza protección contra rasguños, grietas, polvo y burbujas.
               </p>
 
               <ul className="mt-6 grid gap-3">

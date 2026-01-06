@@ -9,13 +9,6 @@ export const metadata = {
 }
 
 export default function VibaPage() {
-  const gallery = [
-    "/interactive-digital-signage-wall.jpg",
-    "/digital-menu-board-in-restaurant.jpg",
-    "/interactive-game-with-brand-elements.jpg",
-    "/interactive-digital-signage-wall.jpg",
-  ]
-
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden bg-background">
@@ -39,14 +32,18 @@ export default function VibaPage() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section className="py-16 bg-card/30">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {gallery.map((src) => (
-              <div key={src} className="aspect-[3/4] rounded-xl overflow-hidden border border-border bg-card/50">
-                <img src={src} alt="Viba" className="h-full w-full object-cover" />
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto">
+            <div className="aspect-video rounded-2xl overflow-hidden border border-border shadow-2xl">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/z0xSsC8dpsA"
+                title="Viba Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </section>

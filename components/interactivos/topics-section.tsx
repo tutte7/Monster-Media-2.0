@@ -27,8 +27,8 @@ export function TopicsSection() {
       image: "/portada-MotionSphere.jpg",
       video: "https://www.youtube.com/watch?v=Gd53HK_ML8M",
       summary: t({
-        es: "Activaciones inmersivas con simuladores de alto impacto para marcas líderes.",
-        en: "Immersive activations with high‑impact simulators for leading brands.",
+        es: "Una experiencia inmersiva que transforma el entorno en un simulador interactivo que combina movimiento, visuales y entretenimiento de última generación.",
+        en: "An immersive experience that transforms the environment into an interactive simulator that combines movement, visuals, and next-generation entertainment.",
       }),
       source: "https://luisgarciamoreno95.wixsite.com/monster1/motionsphere",
     },
@@ -45,12 +45,12 @@ export function TopicsSection() {
     },
     {
       slug: "/monster-media/kioskos",
-      title: t({ es: "Kioskos", en: "Kiosks" }),
+      title: t({ es: "Centros de Carga Interactivos", en: "Interactive Charging Hubs" }),
       image: "/portada-kioskos.png",
       video: "https://www.youtube.com/watch?v=5ueP_qWTJbg",
       summary: t({
-        es: "Centros de carga y experiencias táctiles con contenido de marca y juegos interactivos.",
-        en: "Charging hubs and touch experiences with branded content and interactive games.",
+        es: "Experiencias digitales personalizadas ideal para campañas publicitarias y eventos de cualquier escala.",
+        en: "Customized digital experiences ideal for advertising campaigns and events of any scale.",
       }),
       source: "https://luisgarciamoreno95.wixsite.com/monster1/kioskos",
     },
